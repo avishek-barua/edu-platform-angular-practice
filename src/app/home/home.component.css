@@ -1,0 +1,126 @@
+
+.home {
+    min-height: 100vh;
+    background: linear-gradient(rgba(198, 59, 250, 0.8), rgba(198, 59, 250, 0.8)),
+      url('/assets/bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 0;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .home .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-top: 14rem;
+    padding-bottom: 8rem;
+    text-align: center;
+  }
+  
+  .home .content h1 {
+    font-size: 5rem;
+    color: #fff;
+    padding: 0 1rem;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+  }
+  
+  .home .content p {
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 25rem;
+  }
+  
+  .home .content button {
+    height: 4rem;
+    width: 20rem;
+    border-radius: 5rem;
+    background: var(--pink);
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.2s;
+    border: none;
+    box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
+  }
+  
+  .home .content button:hover {
+    letter-spacing: 0.2rem;
+  }
+  
+  .home .box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .home .box-container .box {
+    height: 20rem;
+    width: 25rem;
+    background: #fff;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    margin: 2rem;
+    cursor: pointer;
+  }
+  
+  .home .box-container .box i {
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    background: var(--violet);
+    font-size: 3rem;
+    margin: 2rem 0;
+    transition: 0.2s;
+  }
+  
+  .home .box-container .box h3 {
+    font-size: 2rem;
+    color: var(--pink);
+    transition: 0.2s;
+  }
+  
+  .home .box-container .box p {
+    font-size: 1.3rem;
+    padding: 0.7rem 2rem;
+    color: #666;
+  }
+  
+  .home .box-container .box:hover i {
+    background: var(--pink);
+  }
+  
+  .home .box-container .box:hover h3 {
+    color: var(--violet);
+  }
+  
+  .home::before {
+    content: "";
+    position: absolute;
+    bottom: -25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 70vh solid #fff;
+    width: 120%;
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+  @media(max-width: 768px){
+    .home .content p {
+        padding: 1.5rem 2rem;
+      }
+    
+      .home::before {
+        display: none;
+      }
+    
+  }
